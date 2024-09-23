@@ -1,0 +1,49 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "c:/Users/uso/Documents/PlatformIO/Projects/240911-144833-blinky-ch32v003fun/include",
+                "c:/Users/uso/Documents/PlatformIO/Projects/240911-144833-blinky-ch32v003fun/src",
+                "C:/Users/uso/AppData/Local/Programs/LonganIDE/.platformio/packages/framework-ch32v003fun/ch32v003fun",
+                "C:/Users/uso/AppData/Local/Programs/LonganIDE/.platformio/packages/framework-ch32v003fun/extralibs",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "c:/Users/uso/Documents/PlatformIO/Projects/240911-144833-blinky-ch32v003fun/include",
+                    "c:/Users/uso/Documents/PlatformIO/Projects/240911-144833-blinky-ch32v003fun/src",
+                    "C:/Users/uso/AppData/Local/Programs/LonganIDE/.platformio/packages/framework-ch32v003fun/ch32v003fun",
+                    "C:/Users/uso/AppData/Local/Programs/LonganIDE/.platformio/packages/framework-ch32v003fun/extralibs",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60111",
+                "CH32V003F4",
+                "CH32V00X",
+                "CH32V00x",
+                "CH32V003",
+                "__PIO_BUILD_CH32V003FUN__",
+                ""
+            ],
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++17",
+            "compilerPath": "C:/Users/uso/AppData/Local/Programs/LonganIDE/.platformio/packages/toolchain-riscv/bin/riscv-none-embed-gcc.exe",
+            "compilerArgs": [
+                "-msmall-data-limit=0",
+                "-msave-restore",
+                "-march=rv32ecxw",
+                "-mabi=ilp32e",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
