@@ -5,27 +5,47 @@
 	(uuid "fd862d55-1df3-4e8e-9edb-750dd582e1a0")
 	(paper "A4")
 	(lib_symbols
-		(symbol "74xx:74HC595"
+		(symbol "74xx:74HC164"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -7.62 13.97 0)
+				(at 1.905 -13.97 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "74HC595"
-				(at -7.62 -16.51 0)
+			(property "Value" "74HC164"
+				(at 1.905 -16.51 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
+				(at 22.86 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT164.pdf"
+				(at 22.86 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "8-bit serial-in parallel-out shift register"
 				(at 0 0 0)
 				(effects
 					(font
@@ -34,7 +54,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
+			(property "ki_keywords" "8-bit shift register"
 				(at 0 0 0)
 				(effects
 					(font
@@ -43,7 +63,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+			(property "ki_fp_filters" "SOIC*3.9x8.7*P1.27mm* ?SSOP*P0.65mm* DIP*W7.62mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -52,29 +72,24 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "HCMOS SR 3State"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "74HC164_0_1"
+				(rectangle
+					(start 7.62 10.16)
+					(end -7.62 -12.7)
+					(stroke
+						(width 0.254)
+						(type default)
 					)
-					(hide yes)
+					(fill
+						(type background)
+					)
 				)
 			)
-			(property "ki_fp_filters" "DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm* SOIC*5.3x10.2mm*P1.27mm* SOIC*7.5x10.3mm*P1.27mm*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "74HC595_1_0"
-				(pin tri_state line
-					(at 10.16 7.62 180)
+			(symbol "74HC164_1_1"
+				(pin input line
+					(at -10.16 0 0)
 					(length 2.54)
-					(name "QB"
+					(name "DSA"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -89,10 +104,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 2.54 0)
+				(pin output line
+					(at 10.16 -2.54 180)
 					(length 2.54)
-					(name "~{SRCLR}"
+					(name "Q4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -107,10 +122,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 5.08 0)
+				(pin output line
+					(at 10.16 -5.08 180)
 					(length 2.54)
-					(name "SRCLK"
+					(name "Q5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -125,10 +140,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 -2.54 0)
+				(pin output line
+					(at 10.16 -7.62 180)
 					(length 2.54)
-					(name "RCLK"
+					(name "Q6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -143,10 +158,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 -5.08 0)
+				(pin output line
+					(at 10.16 -10.16 180)
 					(length 2.54)
-					(name "~{OE}"
+					(name "Q7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -161,10 +176,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 10.16 0)
+				(pin power_in line
+					(at 0 12.7 270)
 					(length 2.54)
-					(name "SER"
+					(name "VCC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -179,46 +194,10 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at 10.16 10.16 180)
+				(pin input line
+					(at -10.16 -2.54 0)
 					(length 2.54)
-					(name "QA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 15.24 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 10.16 5.08 180)
-					(length 2.54)
-					(name "QC"
+					(name "DSB"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -233,10 +212,10 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at 10.16 2.54 180)
+				(pin output line
+					(at 10.16 7.62 180)
 					(length 2.54)
-					(name "QD"
+					(name "Q0"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -251,10 +230,10 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at 10.16 0 180)
+				(pin output line
+					(at 10.16 5.08 180)
 					(length 2.54)
-					(name "QE"
+					(name "Q1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -269,10 +248,10 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at 10.16 -2.54 180)
+				(pin output line
+					(at 10.16 2.54 180)
 					(length 2.54)
-					(name "QF"
+					(name "Q2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -287,10 +266,10 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at 10.16 -5.08 180)
+				(pin output line
+					(at 10.16 0 180)
 					(length 2.54)
-					(name "QG"
+					(name "Q3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -305,10 +284,10 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at 10.16 -7.62 180)
+				(pin power_in line
+					(at 0 -15.24 90)
 					(length 2.54)
-					(name "QH"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -323,10 +302,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -17.78 90)
+				(pin input line
+					(at -10.16 -7.62 0)
 					(length 2.54)
-					(name "GND"
+					(name "CP"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -341,10 +320,10 @@
 						)
 					)
 				)
-				(pin output line
-					(at 10.16 -12.7 180)
+				(pin input line
+					(at -10.16 5.08 0)
 					(length 2.54)
-					(name "QH'"
+					(name "~{MR}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -357,19 +336,6 @@
 								(size 1.27 1.27)
 							)
 						)
-					)
-				)
-			)
-			(symbol "74HC595_1_1"
-				(rectangle
-					(start -7.62 12.7)
-					(end 7.62 -15.24)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
 					)
 				)
 			)
@@ -2916,7 +2882,7 @@
 				)
 			)
 		)
-		(symbol "Transistor_BJT:BC237"
+		(symbol "Transistor_BJT:BC848"
 			(pin_names
 				(offset 0) hide)
 			(exclude_from_sim no)
@@ -2931,7 +2897,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BC237"
+			(property "Value" "BC848"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -2940,7 +2906,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -2951,7 +2917,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+			(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2961,7 +2927,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+			(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2970,7 +2936,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Epitaxial Silicon NPN Transistor"
+			(property "ki_keywords" "NPN Small Signal Transistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2979,7 +2945,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2988,19 +2954,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "BC237_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0.635 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "BC848_0_1"
 				(polyline
 					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
@@ -3061,28 +3015,10 @@
 					)
 				)
 			)
-			(symbol "BC237_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
+			(symbol "BC848_1_1"
 				(pin input line
 					(at -5.08 0 0)
-					(length 5.08)
+					(length 5.715)
 					(name "B"
 						(effects
 							(font
@@ -3090,7 +3026,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3108,6 +3044,24 @@
 							)
 						)
 					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "3"
 						(effects
 							(font
@@ -3118,7 +3072,7 @@
 				)
 			)
 		)
-		(symbol "Transistor_BJT:BC307"
+		(symbol "Transistor_BJT:BC856"
 			(pin_names
 				(offset 0) hide)
 			(exclude_from_sim no)
@@ -3133,7 +3087,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BC307"
+			(property "Value" "BC856"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -3142,7 +3096,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -3153,7 +3107,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3163,7 +3117,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+			(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3172,7 +3126,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Epitaxial Silicon PNP Transistor"
+			(property "ki_keywords" "PNP transistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3181,7 +3135,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3190,10 +3144,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "BC307_0_1"
+			(symbol "BC856_0_1"
 				(polyline
 					(pts
-						(xy 0 0) (xy 0.635 0)
+						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
 						(width 0)
@@ -3205,19 +3159,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 -2.54) (xy 0.635 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 0.635 0.635)
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -3236,12 +3178,12 @@
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(polyline
 					(pts
-						(xy 1.397 -1.905) (xy 1.905 -1.397) (xy 0.889 -0.889) (xy 1.397 -1.905) (xy 1.397 -1.905)
+						(xy 2.286 -1.778) (xy 1.778 -2.286) (xy 1.27 -1.27) (xy 2.286 -1.778) (xy 2.286 -1.778)
 					)
 					(stroke
 						(width 0)
@@ -3263,11 +3205,11 @@
 					)
 				)
 			)
-			(symbol "BC307_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
+			(symbol "BC856_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.715)
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3282,10 +3224,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 5.08)
-					(name "B"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3301,9 +3243,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "E"
+					(name "C"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3712,6 +3654,12 @@
 		(uuid "1c7823db-20b4-4c23-a7c1-31daa8771482")
 	)
 	(junction
+		(at 213.36 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1c9dbccd-d67c-45f5-b3e2-0db366322e3d")
+	)
+	(junction
 		(at 266.7 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3856,12 +3804,6 @@
 		(uuid "6eeeed29-a2b8-43bf-95d3-31d8b6b07865")
 	)
 	(junction
-		(at 175.26 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "751dfa2b-221e-4146-a289-53de3f906bff")
-	)
-	(junction
 		(at 35.56 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3934,6 +3876,12 @@
 		(uuid "9d73039a-1ea9-4515-8641-722ded2028d9")
 	)
 	(junction
+		(at 180.34 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9ef21d99-bf7e-453b-afb8-a3baa7ca3a99")
+	)
+	(junction
 		(at 138.43 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3950,6 +3898,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a4293256-dd2c-4ee3-905e-b78d564b7a45")
+	)
+	(junction
+		(at 229.87 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9c03023-0cda-4ffa-b8b4-6b61cc0950e3")
 	)
 	(junction
 		(at 31.75 34.29)
@@ -3980,12 +3934,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b03ecade-48a1-4d47-85e5-64e40e40314d")
-	)
-	(junction
-		(at 227.33 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b4241f36-dbb3-440c-94f4-e6ba38097a06")
 	)
 	(junction
 		(at 72.39 88.9)
@@ -4078,6 +4026,12 @@
 		(uuid "ebc41f06-650e-4bc0-b0e9-df91fe2e5367")
 	)
 	(junction
+		(at 177.8 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec17c6c6-e370-482e-ab97-cd33237fc6a3")
+	)
+	(junction
 		(at 204.47 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4103,13 +4057,13 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 105.41) (xy 175.26 123.19)
+			(xy 226.06 140.97) (xy 234.95 140.97)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "01c22aa2-8527-43d4-969f-ddc64031db02")
+		(uuid "01edee18-7344-4ca3-bb15-27f0df801e4b")
 	)
 	(wire
 		(pts
@@ -4153,16 +4107,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 118.11) (xy 168.91 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0640d140-1ed2-450b-ba1d-33095bd3d51c")
-	)
-	(wire
-		(pts
 			(xy 109.22 120.65) (xy 119.38 120.65)
 		)
 		(stroke
@@ -4190,16 +4134,6 @@
 			(type default)
 		)
 		(uuid "088704fd-949c-4e2a-b510-c081801ccd93")
-	)
-	(wire
-		(pts
-			(xy 180.34 113.03) (xy 180.34 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "092eb35e-04dd-4098-97b8-a50d6bb6c31c")
 	)
 	(wire
 		(pts
@@ -4233,13 +4167,23 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 125.73) (xy 168.91 125.73)
+			(xy 139.7 125.73) (xy 175.26 125.73)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "0da78ab0-7299-4f99-a575-9dbce14d0aba")
+	)
+	(wire
+		(pts
+			(xy 213.36 133.35) (xy 201.93 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0da8f68c-a98a-4d19-9cac-0f71decf40f3")
 	)
 	(wire
 		(pts
@@ -4260,16 +4204,6 @@
 			(type default)
 		)
 		(uuid "1006c146-dc3f-42e9-9be1-9286abd7ccad")
-	)
-	(wire
-		(pts
-			(xy 229.87 130.81) (xy 234.95 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10b9793c-9e11-490f-a9a1-90d45ae8f033")
 	)
 	(wire
 		(pts
@@ -4333,6 +4267,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 113.03) (xy 229.87 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "146cfbad-5bcb-40ea-827e-ef7a9b33c258")
+	)
+	(wire
+		(pts
 			(xy 101.6 52.07) (xy 105.41 52.07)
 		)
 		(stroke
@@ -4363,7 +4307,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 170.18) (xy 50.8 176.53)
+			(xy 52.07 170.18) (xy 52.07 176.53)
 		)
 		(stroke
 			(width 0)
@@ -4453,37 +4397,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 133.35) (xy 181.61 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1be5a5a4-78fb-4e0b-b610-42d558327ef9")
-	)
-	(wire
-		(pts
-			(xy 219.71 133.35) (xy 219.71 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c175006-75c1-4d1a-8a7a-5c2546ecf13b")
-	)
-	(wire
-		(pts
-			(xy 175.26 123.19) (xy 175.26 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c69e239-3b51-4b49-95e4-6f692d96ec61")
-	)
-	(wire
-		(pts
-			(xy 73.66 179.07) (xy 86.36 179.07)
+			(xy 74.93 179.07) (xy 86.36 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4530,6 +4444,16 @@
 			(type default)
 		)
 		(uuid "21795637-7860-4cb9-a7ee-818163aff9e4")
+	)
+	(wire
+		(pts
+			(xy 175.26 128.27) (xy 175.26 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21b4d5f8-4897-4fea-8ddd-a943c68d6363")
 	)
 	(wire
 		(pts
@@ -4600,6 +4524,26 @@
 			(type default)
 		)
 		(uuid "271dfe22-db25-42c3-934e-1ce767392cd2")
+	)
+	(wire
+		(pts
+			(xy 213.36 133.35) (xy 213.36 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27ef251e-4f84-43a8-92b1-e243559c7e1a")
+	)
+	(wire
+		(pts
+			(xy 180.34 130.81) (xy 181.61 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2862ef1f-50f9-4659-9925-62700a32f3f9")
 	)
 	(wire
 		(pts
@@ -4803,6 +4747,16 @@
 	)
 	(wire
 		(pts
+			(xy 177.8 135.89) (xy 181.61 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b1fd10b-77cb-4383-adf8-00aec700665f")
+	)
+	(wire
+		(pts
 			(xy 262.89 67.31) (xy 266.7 67.31)
 		)
 		(stroke
@@ -4810,6 +4764,16 @@
 			(type default)
 		)
 		(uuid "3b2db039-7778-4494-9374-e0864b8b67d8")
+	)
+	(wire
+		(pts
+			(xy 177.8 105.41) (xy 177.8 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cc643db-5f2a-4d75-acaf-4c92cae1e7bf")
 	)
 	(wire
 		(pts
@@ -4853,16 +4817,6 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 128.27) (xy 227.33 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "437bed1e-d3b9-44c7-bfa5-db3d67e0c29c")
-	)
-	(wire
-		(pts
 			(xy 196.85 21.59) (xy 200.66 21.59)
 		)
 		(stroke
@@ -4890,16 +4844,6 @@
 			(type default)
 		)
 		(uuid "45e04f8c-829a-494c-b28f-b67db4e0e269")
-	)
-	(wire
-		(pts
-			(xy 219.71 123.19) (xy 234.95 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "470d4b94-12d5-4909-9d41-cfd539e2ee40")
 	)
 	(wire
 		(pts
@@ -5123,6 +5067,16 @@
 	)
 	(wire
 		(pts
+			(xy 180.34 123.19) (xy 180.34 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5846d978-972d-4666-9dff-0c35e5c68c06")
+	)
+	(wire
+		(pts
 			(xy 35.56 21.59) (xy 39.37 21.59)
 		)
 		(stroke
@@ -5203,6 +5157,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 135.89) (xy 234.95 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6075a53f-498c-41a3-8212-cb436d8091c3")
+	)
+	(wire
+		(pts
 			(xy 152.4 158.75) (xy 152.4 130.81)
 		)
 		(stroke
@@ -5223,7 +5187,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 176.53) (xy 76.2 176.53)
+			(xy 74.93 176.53) (xy 76.2 176.53)
 		)
 		(stroke
 			(width 0)
@@ -5253,6 +5217,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 128.27) (xy 175.26 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "659b8d12-781e-4852-9ee7-217900735848")
+	)
+	(wire
+		(pts
 			(xy 26.67 171.45) (xy 35.56 171.45)
 		)
 		(stroke
@@ -5270,16 +5244,6 @@
 			(type default)
 		)
 		(uuid "6772708d-75df-43f9-a864-f886279df328")
-	)
-	(wire
-		(pts
-			(xy 168.91 118.11) (xy 181.61 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69020f18-21b4-4f7b-9fde-73da658f442a")
 	)
 	(wire
 		(pts
@@ -5310,6 +5274,16 @@
 			(type default)
 		)
 		(uuid "6bfa4cbf-edfc-4fe8-a535-19f45a47c56b")
+	)
+	(wire
+		(pts
+			(xy 213.36 130.81) (xy 223.52 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c44693d-75a7-48db-96a3-dd9c389d3355")
 	)
 	(wire
 		(pts
@@ -5363,6 +5337,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 133.35) (xy 234.95 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7561c958-1485-4a4f-b962-fbfdde552fca")
+	)
+	(wire
+		(pts
 			(xy 139.7 120.65) (xy 166.37 120.65)
 		)
 		(stroke
@@ -5403,6 +5387,16 @@
 	)
 	(wire
 		(pts
+			(xy 177.8 105.41) (xy 226.06 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "777a3106-c00f-463e-adab-8c33266b1c86")
+	)
+	(wire
+		(pts
 			(xy 160.02 173.99) (xy 160.02 184.15)
 		)
 		(stroke
@@ -5420,16 +5414,6 @@
 			(type default)
 		)
 		(uuid "78e0bf88-c3b9-4085-8454-15e8a1ccacda")
-	)
-	(wire
-		(pts
-			(xy 234.95 135.89) (xy 227.33 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "798ef5df-a8c6-4190-a03a-60a32117d258")
 	)
 	(wire
 		(pts
@@ -5613,16 +5597,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 128.27) (xy 227.33 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "922ead1b-8c3c-4863-ab10-7b3200a8d068")
-	)
-	(wire
-		(pts
 			(xy 162.56 173.99) (xy 162.56 184.15)
 		)
 		(stroke
@@ -5703,6 +5677,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 176.53) (xy 55.88 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98fb7efc-400c-4acf-9c44-626fee165a23")
+	)
+	(wire
+		(pts
 			(xy 170.18 152.4) (xy 177.8 152.4)
 		)
 		(stroke
@@ -5730,16 +5714,6 @@
 			(type default)
 		)
 		(uuid "99f90a38-0e90-4eb1-8c61-9c45c89c5c0b")
-	)
-	(wire
-		(pts
-			(xy 201.93 133.35) (xy 219.71 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a23d8f0-a122-477e-aa38-74c1f99123ec")
 	)
 	(wire
 		(pts
@@ -5793,16 +5767,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 130.81) (xy 181.61 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a600f232-680a-465c-b64c-fde133ca2802")
-	)
-	(wire
-		(pts
 			(xy 105.41 40.64) (xy 114.3 40.64)
 		)
 		(stroke
@@ -5830,6 +5794,16 @@
 			(type default)
 		)
 		(uuid "a75035aa-3e48-47f1-a788-c394e2652acd")
+	)
+	(wire
+		(pts
+			(xy 229.87 128.27) (xy 234.95 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7a333a0-7df3-43ff-9263-94d835f26957")
 	)
 	(wire
 		(pts
@@ -5873,7 +5847,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 123.19) (xy 175.26 123.19)
+			(xy 139.7 123.19) (xy 177.8 123.19)
 		)
 		(stroke
 			(width 0)
@@ -5910,16 +5884,6 @@
 			(type default)
 		)
 		(uuid "af4e99a8-757c-4cf5-9669-03c6088acd4a")
-	)
-	(wire
-		(pts
-			(xy 227.33 105.41) (xy 175.26 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b186a2fa-b0ec-444a-bdda-6e13022e0f9d")
 	)
 	(wire
 		(pts
@@ -6033,6 +5997,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 128.27) (xy 229.87 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfbe98ec-9fb5-49a1-98ef-d84922ca40fa")
+	)
+	(wire
+		(pts
 			(xy 184.15 39.37) (xy 189.23 39.37)
 		)
 		(stroke
@@ -6040,6 +6014,16 @@
 			(type default)
 		)
 		(uuid "c16ff4b4-a86f-4c6b-a992-c19d8373f611")
+	)
+	(wire
+		(pts
+			(xy 191.77 143.51) (xy 191.77 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c21bc4e2-ef5b-4f35-89a3-ef3a5fd27939")
 	)
 	(wire
 		(pts
@@ -6103,16 +6087,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 123.19) (xy 181.61 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8b6cf83-ab59-4d40-9bbf-e19dd2ebe5aa")
-	)
-	(wire
-		(pts
 			(xy 39.37 134.62) (xy 39.37 135.89)
 		)
 		(stroke
@@ -6120,16 +6094,6 @@
 			(type default)
 		)
 		(uuid "c98a1029-5a8a-45d1-aba7-d2eb209e72d0")
-	)
-	(wire
-		(pts
-			(xy 227.33 128.27) (xy 227.33 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca9269a3-4cf7-4cee-ac5b-8e7b3524a33f")
 	)
 	(wire
 		(pts
@@ -6143,6 +6107,16 @@
 	)
 	(wire
 		(pts
+			(xy 245.11 113.03) (xy 245.11 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb366c24-cfed-432d-be29-0bdbb8b4b1c3")
+	)
+	(wire
+		(pts
 			(xy 130.81 29.21) (xy 130.81 34.29)
 		)
 		(stroke
@@ -6150,6 +6124,16 @@
 			(type default)
 		)
 		(uuid "cbe5b795-157b-45a2-a7d4-1abe43119c4b")
+	)
+	(wire
+		(pts
+			(xy 177.8 123.19) (xy 177.8 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc54a6cb-3836-4576-aa05-603f54c0316c")
 	)
 	(wire
 		(pts
@@ -6233,16 +6217,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 125.73) (xy 181.61 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5772bb7-1acd-4618-89d8-75cca48dd78e")
-	)
-	(wire
-		(pts
 			(xy 237.49 40.64) (xy 246.38 40.64)
 		)
 		(stroke
@@ -6270,6 +6244,16 @@
 			(type default)
 		)
 		(uuid "d65f7c7c-c2ec-48ef-bbc2-a249419e5a4d")
+	)
+	(wire
+		(pts
+			(xy 226.06 105.41) (xy 226.06 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8d9dc4b-2f97-472d-89f5-a8d955317cbd")
 	)
 	(wire
 		(pts
@@ -6353,6 +6337,16 @@
 	)
 	(wire
 		(pts
+			(xy 180.34 123.19) (xy 181.61 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1df3fd3-bc51-4892-9c45-12ad94f62cd6")
+	)
+	(wire
+		(pts
 			(xy 83.82 88.9) (xy 72.39 88.9)
 		)
 		(stroke
@@ -6360,16 +6354,6 @@
 			(type default)
 		)
 		(uuid "e2af9e76-3ad9-4bde-98b3-a119cfc15ca7")
-	)
-	(wire
-		(pts
-			(xy 229.87 113.03) (xy 229.87 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e30ffe05-dbf3-4ff5-9676-195deeddec19")
 	)
 	(wire
 		(pts
@@ -6413,6 +6397,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 113.03) (xy 191.77 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e858ca4c-5281-4f01-9ac6-5ded41721d7e")
+	)
+	(wire
+		(pts
 			(xy 22.86 186.69) (xy 35.56 186.69)
 		)
 		(stroke
@@ -6433,23 +6427,13 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 179.07) (xy 50.8 179.07)
+			(xy 46.99 179.07) (xy 55.88 179.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "eef4ba27-df2e-41fc-8d71-a1ce4630729b")
-	)
-	(wire
-		(pts
-			(xy 231.14 138.43) (xy 234.95 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef0145cf-48aa-44a4-86c1-75ccf98f4e59")
 	)
 	(wire
 		(pts
@@ -6460,6 +6444,16 @@
 			(type default)
 		)
 		(uuid "f08d550a-338d-450d-b31d-bf6255278519")
+	)
+	(wire
+		(pts
+			(xy 180.34 113.03) (xy 180.34 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f391321b-6bca-498f-9301-0664d8990d03")
 	)
 	(wire
 		(pts
@@ -6483,7 +6477,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 170.18) (xy 50.8 170.18)
+			(xy 46.99 170.18) (xy 52.07 170.18)
 		)
 		(stroke
 			(width 0)
@@ -6843,7 +6837,7 @@
 		)
 		(uuid "44a6c262-71ec-43cd-9640-40f783e9c59b")
 	)
-	(label "SEG1_HIGH"
+	(label "SEG2_HIGH"
 		(at 83.82 88.9 180)
 		(fields_autoplaced yes)
 		(effects
@@ -7284,7 +7278,7 @@
 		(uuid "cb910d2a-d8cd-4cca-bb86-9101f389434a")
 	)
 	(label "SEG9_LOW"
-		(at 255.27 123.19 0)
+		(at 255.27 125.73 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7295,7 +7289,7 @@
 		(uuid "ce3cc75f-853e-4184-b2a5-fa0aa4f9d79c")
 	)
 	(label "SEG7_LOW"
-		(at 201.93 133.35 0)
+		(at 213.36 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7438,73 +7432,7 @@
 		(uuid "fecd10c5-a093-4b5f-9d09-9f0208722902")
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 129.54 113.03 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "051f3ac3-7c84-4cdf-835a-4fc93564fa0d")
-		(property "Reference" "#PWR038"
-			(at 129.54 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 126.492 108.712 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 129.54 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 129.54 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2552f27d-d679-4f2c-851a-bca28a030d5b")
-		)
-		(instances
-			(project "e"
-				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
-					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 267.97 80.01 0)
 		(mirror x)
 		(unit 1)
@@ -7522,8 +7450,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 273.05 78.7401 0)
+		(property "Value" "BC856"
+			(at 273.05 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7531,7 +7459,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 273.05 78.105 0)
 			(effects
 				(font
@@ -7542,7 +7470,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 267.97 80.01 0)
 			(effects
 				(font
@@ -7552,7 +7480,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 267.97 80.01 0)
 			(effects
 				(font
@@ -7580,7 +7508,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 194.31 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7598,7 +7526,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 199.39 86.3599 0)
 			(effects
 				(font
@@ -7607,7 +7535,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 199.39 86.995 0)
 			(effects
 				(font
@@ -7618,7 +7546,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 194.31 85.09 0)
 			(effects
 				(font
@@ -7628,7 +7556,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 194.31 85.09 0)
 			(effects
 				(font
@@ -7683,7 +7611,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 195.072 48.26 90)
 			(effects
 				(font
@@ -7810,7 +7738,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+5V"
 			(at 88.9 175.2599 0)
 			(effects
 				(font
@@ -7982,72 +7910,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 191.77 113.03 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0f9f6251-4682-4dfc-a264-b626920b1b7c")
-		(property "Reference" "#PWR035"
-			(at 191.77 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 188.722 108.712 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 191.77 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 191.77 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6a0d12dc-5c2a-4156-b3a3-1c992d2bacdd")
-		)
-		(instances
-			(project ""
-				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
-					(reference "#PWR035")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 39.37 93.98 0)
 		(unit 1)
@@ -8075,7 +7937,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 37.592 93.98 90)
 			(effects
 				(font
@@ -8118,7 +7980,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 168.91 34.29 0)
 		(mirror x)
 		(unit 1)
@@ -8136,8 +7998,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 173.99 33.0201 0)
+		(property "Value" "BC856"
+			(at 173.99 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8145,7 +8007,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 173.99 32.385 0)
 			(effects
 				(font
@@ -8156,7 +8018,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 168.91 34.29 0)
 			(effects
 				(font
@@ -8166,7 +8028,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 168.91 34.29 0)
 			(effects
 				(font
@@ -8221,7 +8083,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 228.092 93.98 90)
 			(effects
 				(font
@@ -8330,72 +8192,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 179.07 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "19f6a961-68b6-4c9a-81c0-a6177d48f350")
-		(property "Reference" "#PWR039"
-			(at 179.07 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 179.07 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 179.07 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 179.07 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 179.07 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "046cebb9-fca0-4faf-9f43-d67080fb7686")
-		)
-		(instances
-			(project "e"
-				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
-					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Diode_Bridge:GBU4M")
 		(at 35.56 158.75 180)
 		(unit 1)
@@ -8497,7 +8293,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 129.032 71.12 90)
 			(effects
 				(font
@@ -8540,7 +8336,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 95.25 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8558,7 +8354,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 100.33 40.6399 0)
 			(effects
 				(font
@@ -8567,7 +8363,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 100.33 41.275 0)
 			(effects
 				(font
@@ -8578,7 +8374,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 95.25 39.37 0)
 			(effects
 				(font
@@ -8588,7 +8384,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 95.25 39.37 0)
 			(effects
 				(font
@@ -8946,6 +8742,71 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 69.85 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2215aef2-f22c-4dd7-be40-697aa4c8e8d1")
+		(property "Reference" "J10"
+			(at 70.485 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 71.882 181.102 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 69.85 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 69.85 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "898d9620-fd2d-4f55-9057-be65f1be446e")
+		)
+		(instances
+			(project "e"
+				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 31.75 139.7 0)
 		(unit 1)
@@ -8973,7 +8834,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 29.972 139.7 90)
 			(effects
 				(font
@@ -9016,7 +8877,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 267.97 34.29 0)
 		(mirror x)
 		(unit 1)
@@ -9034,8 +8895,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 273.05 33.0201 0)
+		(property "Value" "BC856"
+			(at 273.05 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9043,7 +8904,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 273.05 32.385 0)
 			(effects
 				(font
@@ -9054,7 +8915,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 267.97 34.29 0)
 			(effects
 				(font
@@ -9064,7 +8925,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 267.97 34.29 0)
 			(effects
 				(font
@@ -9092,7 +8953,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 227.33 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9110,7 +8971,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 232.41 86.3599 0)
 			(effects
 				(font
@@ -9119,7 +8980,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 232.41 86.995 0)
 			(effects
 				(font
@@ -9130,7 +8991,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 227.33 85.09 0)
 			(effects
 				(font
@@ -9140,7 +9001,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 227.33 85.09 0)
 			(effects
 				(font
@@ -9195,7 +9056,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 29.972 116.84 90)
 			(effects
 				(font
@@ -9238,7 +9099,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 95.25 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9256,7 +9117,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 100.33 86.3599 0)
 			(effects
 				(font
@@ -9265,7 +9126,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 100.33 86.995 0)
 			(effects
 				(font
@@ -9276,7 +9137,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 95.25 85.09 0)
 			(effects
 				(font
@@ -9286,7 +9147,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 95.25 85.09 0)
 			(effects
 				(font
@@ -9475,7 +9336,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 29.972 71.12 90)
 			(effects
 				(font
@@ -9545,7 +9406,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 268.732 48.26 90)
 			(effects
 				(font
@@ -9654,7 +9515,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 161.29 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9672,7 +9533,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 166.37 40.6399 0)
 			(effects
 				(font
@@ -9681,7 +9542,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 166.37 41.275 0)
 			(effects
 				(font
@@ -9692,7 +9553,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 161.29 39.37 0)
 			(effects
 				(font
@@ -9702,7 +9563,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 161.29 39.37 0)
 			(effects
 				(font
@@ -9757,7 +9618,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 235.712 71.12 90)
 			(effects
 				(font
@@ -9827,7 +9688,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 37.592 139.7 90)
 			(effects
 				(font
@@ -9864,6 +9725,72 @@
 			(project "e"
 				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
 					(reference "R68")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 129.54 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f351ae7-f2ad-43ca-bb39-1d874fe82199")
+		(property "Reference" "#PWR038"
+			(at 129.54 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 129.54 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 129.54 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c76c56c-3ba8-4f83-91f8-4e3431815565")
+		)
+		(instances
+			(project "e"
+				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -9956,7 +9883,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 194.31 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9974,7 +9901,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 199.39 40.6399 0)
 			(effects
 				(font
@@ -9983,7 +9910,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 199.39 41.275 0)
 			(effects
 				(font
@@ -9994,7 +9921,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 194.31 39.37 0)
 			(effects
 				(font
@@ -10004,7 +9931,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 194.31 39.37 0)
 			(effects
 				(font
@@ -10059,7 +9986,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 136.652 48.26 90)
 			(effects
 				(font
@@ -10129,7 +10056,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 268.732 93.98 90)
 			(effects
 				(font
@@ -10436,7 +10363,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 69.85 34.29 0)
 		(mirror x)
 		(unit 1)
@@ -10454,8 +10381,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 74.93 33.0201 0)
+		(property "Value" "BC856"
+			(at 74.93 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10463,7 +10390,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 74.93 32.385 0)
 			(effects
 				(font
@@ -10474,7 +10401,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 69.85 34.29 0)
 			(effects
 				(font
@@ -10484,7 +10411,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 69.85 34.29 0)
 			(effects
 				(font
@@ -10586,7 +10513,73 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "power:+5V")
+		(at 191.77 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "40b16fdb-d102-4b30-807d-20c1e284442e")
+		(property "Reference" "#PWR035"
+			(at 191.77 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 191.77 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 191.77 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 191.77 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f633d538-949a-4ccd-bad1-5386c8247431")
+		)
+		(instances
+			(project "e"
+				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC848")
 		(at 161.29 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10604,7 +10597,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 166.37 86.3599 0)
 			(effects
 				(font
@@ -10613,7 +10606,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 166.37 86.995 0)
 			(effects
 				(font
@@ -10624,7 +10617,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 161.29 85.09 0)
 			(effects
 				(font
@@ -10634,7 +10627,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 161.29 85.09 0)
 			(effects
 				(font
@@ -10656,6 +10649,72 @@
 			(project "e"
 				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
 					(reference "Q25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 245.11 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4173b5ab-92af-4836-8467-d25760f1f1cc")
+		(property "Reference" "#PWR039"
+			(at 245.11 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 245.11 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 245.11 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.11 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 245.11 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9ae40d4e-549b-4f26-9d52-b440597e2b29")
+		)
+		(instances
+			(project "e"
+				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -10689,7 +10748,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 162.052 93.98 90)
 			(effects
 				(font
@@ -10864,7 +10923,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 102.87 80.01 0)
 		(mirror x)
 		(unit 1)
@@ -10882,8 +10941,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 107.95 78.7401 0)
+		(property "Value" "BC856"
+			(at 107.95 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10891,7 +10950,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 107.95 78.105 0)
 			(effects
 				(font
@@ -10902,7 +10961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 102.87 80.01 0)
 			(effects
 				(font
@@ -10912,7 +10971,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 102.87 80.01 0)
 			(effects
 				(font
@@ -11099,7 +11158,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 136.652 25.4 90)
 			(effects
 				(font
@@ -11169,7 +11228,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 228.092 48.26 90)
 			(effects
 				(font
@@ -11239,7 +11298,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 195.072 25.4 90)
 			(effects
 				(font
@@ -11309,7 +11368,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 235.712 25.4 90)
 			(effects
 				(font
@@ -11379,7 +11438,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 162.052 48.26 90)
 			(effects
 				(font
@@ -11581,7 +11640,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 202.692 25.4 90)
 			(effects
 				(font
@@ -11624,7 +11683,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 29.21 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11642,7 +11701,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 34.29 132.0799 0)
 			(effects
 				(font
@@ -11651,7 +11710,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 34.29 132.715 0)
 			(effects
 				(font
@@ -11662,7 +11721,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 29.21 130.81 0)
 			(effects
 				(font
@@ -11672,7 +11731,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 29.21 130.81 0)
 			(effects
 				(font
@@ -11766,7 +11825,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 69.85 80.01 0)
 		(mirror x)
 		(unit 1)
@@ -11784,8 +11843,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 74.93 78.7401 0)
+		(property "Value" "BC856"
+			(at 74.93 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11793,7 +11852,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 74.93 78.105 0)
 			(effects
 				(font
@@ -11804,7 +11863,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 69.85 80.01 0)
 			(effects
 				(font
@@ -11814,7 +11873,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 69.85 80.01 0)
 			(effects
 				(font
@@ -11869,7 +11928,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 62.992 93.98 90)
 			(effects
 				(font
@@ -11939,7 +11998,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 261.112 48.26 90)
 			(effects
 				(font
@@ -11982,73 +12041,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 231.14 138.43 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5eef989c-11d4-4b0d-952c-4bcf366cf4be")
-		(property "Reference" "#PWR051"
-			(at 231.14 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 231.14 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 231.14 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 231.14 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8d452177-c78c-4246-bd16-37990c93a4ed")
-		)
-		(instances
-			(project "e"
-				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
-					(reference "#PWR051")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 234.95 34.29 0)
 		(mirror x)
 		(unit 1)
@@ -12066,8 +12059,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 240.03 33.0201 0)
+		(property "Value" "BC856"
+			(at 240.03 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12075,7 +12068,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 240.03 32.385 0)
 			(effects
 				(font
@@ -12086,7 +12079,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 234.95 34.29 0)
 			(effects
 				(font
@@ -12096,7 +12089,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 234.95 34.29 0)
 			(effects
 				(font
@@ -12256,72 +12249,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 245.11 118.11 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "613757c2-ab1c-489a-9895-037bcb009afe")
-		(property "Reference" "#PWR053"
-			(at 245.11 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 242.062 114.046 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 245.11 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 245.11 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 245.11 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bdccfe54-3750-41fc-b379-89b1cfafaee9")
-		)
-		(instances
-			(project "e"
-				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
-					(reference "#PWR053")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+28V")
 		(at 63.5 156.21 0)
 		(unit 1)
@@ -12456,7 +12383,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 36.83 80.01 0)
 		(mirror x)
 		(unit 1)
@@ -12474,8 +12401,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 41.91 78.7401 0)
+		(property "Value" "BC856"
+			(at 41.91 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12483,7 +12410,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 41.91 78.105 0)
 			(effects
 				(font
@@ -12494,7 +12421,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 36.83 80.01 0)
 			(effects
 				(font
@@ -12504,7 +12431,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 36.83 80.01 0)
 			(effects
 				(font
@@ -12532,7 +12459,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 135.89 34.29 0)
 		(mirror x)
 		(unit 1)
@@ -12550,8 +12477,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 140.97 33.0201 0)
+		(property "Value" "BC856"
+			(at 140.97 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12559,7 +12486,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 140.97 32.385 0)
 			(effects
 				(font
@@ -12570,7 +12497,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 135.89 34.29 0)
 			(effects
 				(font
@@ -12580,7 +12507,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 135.89 34.29 0)
 			(effects
 				(font
@@ -12608,7 +12535,7 @@
 		)
 	)
 	(symbol
-		(lib_id "74xx:74HC595")
+		(lib_id "74xx:74HC164")
 		(at 191.77 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12618,15 +12545,6 @@
 		(fields_autoplaced yes)
 		(uuid "674baf4a-1b3d-4ed4-a598-3a5245c3f1ca")
 		(property "Reference" "U1"
-			(at 193.9641 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "74HC595"
 			(at 193.9641 113.03 0)
 			(effects
 				(font
@@ -12635,8 +12553,17 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
-			(at 191.77 128.27 0)
+		(property "Value" "74HC164"
+			(at 193.9641 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SSOP-14_5.3x6.2mm_P0.65mm"
+			(at 214.63 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12644,8 +12571,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
-			(at 191.77 128.27 0)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT164.pdf"
+			(at 214.63 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12653,7 +12580,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+		(property "Description" "8-bit serial-in parallel-out shift register"
 			(at 191.77 128.27 0)
 			(effects
 				(font
@@ -12686,9 +12613,6 @@
 		(pin "14"
 			(uuid "7405e829-5ec9-496a-a237-d4fe7b4d0d90")
 		)
-		(pin "15"
-			(uuid "3f2df66d-b472-4430-9f90-efcb5571596e")
-		)
 		(pin "9"
 			(uuid "a3f2d8f4-0884-42ab-a361-1b51f079e936")
 		)
@@ -12697,9 +12621,6 @@
 		)
 		(pin "13"
 			(uuid "caf8a033-ec65-4a24-a49a-96750b773e74")
-		)
-		(pin "16"
-			(uuid "d73d7bf5-0761-46b1-adda-2820d72029b6")
 		)
 		(pin "7"
 			(uuid "a378166e-86e4-48cf-ace4-cde3a77e6e25")
@@ -12720,7 +12641,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 102.87 34.29 0)
 		(mirror x)
 		(unit 1)
@@ -12738,8 +12659,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 107.95 33.0201 0)
+		(property "Value" "BC856"
+			(at 107.95 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12747,7 +12668,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 107.95 32.385 0)
 			(effects
 				(font
@@ -12758,7 +12679,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 102.87 34.29 0)
 			(effects
 				(font
@@ -12768,7 +12689,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 102.87 34.29 0)
 			(effects
 				(font
@@ -12899,7 +12820,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 37.592 25.4 90)
 			(effects
 				(font
@@ -13101,7 +13022,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 169.672 48.26 90)
 			(effects
 				(font
@@ -13171,7 +13092,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 169.672 71.12 90)
 			(effects
 				(font
@@ -13241,7 +13162,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 29.972 93.98 90)
 			(effects
 				(font
@@ -13311,7 +13232,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 37.592 116.84 90)
 			(effects
 				(font
@@ -13420,7 +13341,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 36.83 125.73 0)
 		(mirror x)
 		(unit 1)
@@ -13438,8 +13359,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 41.91 124.4601 0)
+		(property "Value" "BC856"
+			(at 41.91 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13447,7 +13368,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 41.91 123.825 0)
 			(effects
 				(font
@@ -13458,7 +13379,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 36.83 125.73 0)
 			(effects
 				(font
@@ -13468,7 +13389,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 36.83 125.73 0)
 			(effects
 				(font
@@ -13490,6 +13411,71 @@
 			(project "e"
 				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
 					(reference "Q34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 69.85 176.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7c83ebd6-16f4-435c-8b12-32de3c6b8bcc")
+		(property "Reference" "J8"
+			(at 70.485 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "DC +5V"
+			(at 70.104 173.736 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 69.85 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 69.85 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e3cd159f-b518-40fc-8d04-6ec8a0fb1528")
+		)
+		(instances
+			(project "e"
+				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -13589,7 +13575,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 96.012 93.98 90)
 			(effects
 				(font
@@ -13659,7 +13645,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 228.092 71.12 90)
 			(effects
 				(font
@@ -13729,7 +13715,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 136.652 93.98 90)
 			(effects
 				(font
@@ -13997,7 +13983,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 103.632 71.12 90)
 			(effects
 				(font
@@ -14040,7 +14026,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 260.35 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14058,7 +14044,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 265.43 86.3599 0)
 			(effects
 				(font
@@ -14067,7 +14053,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 265.43 86.995 0)
 			(effects
 				(font
@@ -14078,7 +14064,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 260.35 85.09 0)
 			(effects
 				(font
@@ -14088,7 +14074,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 260.35 85.09 0)
 			(effects
 				(font
@@ -14116,7 +14102,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 260.35 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14134,7 +14120,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 265.43 40.6399 0)
 			(effects
 				(font
@@ -14143,7 +14129,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 265.43 41.275 0)
 			(effects
 				(font
@@ -14154,7 +14140,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 260.35 39.37 0)
 			(effects
 				(font
@@ -14164,7 +14150,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 260.35 39.37 0)
 			(effects
 				(font
@@ -14258,7 +14244,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 168.91 80.01 0)
 		(mirror x)
 		(unit 1)
@@ -14276,8 +14262,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 173.99 78.7401 0)
+		(property "Value" "BC856"
+			(at 173.99 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14285,7 +14271,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 173.99 78.105 0)
 			(effects
 				(font
@@ -14296,7 +14282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 168.91 80.01 0)
 			(effects
 				(font
@@ -14306,7 +14292,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 168.91 80.01 0)
 			(effects
 				(font
@@ -14361,7 +14347,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 96.012 48.26 90)
 			(effects
 				(font
@@ -14544,7 +14530,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 103.632 25.4 90)
 			(effects
 				(font
@@ -14587,7 +14573,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 201.93 80.01 0)
 		(mirror x)
 		(unit 1)
@@ -14605,8 +14591,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 207.01 78.7401 0)
+		(property "Value" "BC856"
+			(at 207.01 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14614,7 +14600,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 207.01 78.105 0)
 			(effects
 				(font
@@ -14625,7 +14611,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 201.93 80.01 0)
 			(effects
 				(font
@@ -14635,7 +14621,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 201.93 80.01 0)
 			(effects
 				(font
@@ -14690,7 +14676,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 103.632 93.98 90)
 			(effects
 				(font
@@ -14742,7 +14728,7 @@
 		(dnp no)
 		(uuid "976bbbc3-a61e-4667-9351-da724c821961")
 		(property "Reference" "C2"
-			(at 48.006 168.91 0)
+			(at 43.942 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14751,7 +14737,7 @@
 			)
 		)
 		(property "Value" "470uF 50V"
-			(at 48.006 171.45 0)
+			(at 43.942 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14829,7 +14815,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 29.972 48.26 90)
 			(effects
 				(font
@@ -14899,7 +14885,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 202.692 71.12 90)
 			(effects
 				(font
@@ -14969,7 +14955,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 37.592 48.26 90)
 			(effects
 				(font
@@ -15006,6 +14992,71 @@
 			(project "e"
 				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
 					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 60.96 179.07 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ebe0b4c-6386-4f35-a795-01e2a3d43a27")
+		(property "Reference" "J7"
+			(at 60.325 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "DC 15GND"
+			(at 60.198 181.102 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 60.96 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 60.96 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 60.96 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0150d6f6-cb15-4fef-883d-3c7409a66f56")
+		)
+		(instances
+			(project "e"
+				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -15105,7 +15156,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 202.692 48.26 90)
 			(effects
 				(font
@@ -15280,7 +15331,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 201.93 34.29 0)
 		(mirror x)
 		(unit 1)
@@ -15298,8 +15349,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 207.01 33.0201 0)
+		(property "Value" "BC856"
+			(at 207.01 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15307,7 +15358,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 207.01 32.385 0)
 			(effects
 				(font
@@ -15318,7 +15369,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 201.93 34.29 0)
 			(effects
 				(font
@@ -15328,7 +15379,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 201.93 34.29 0)
 			(effects
 				(font
@@ -15383,7 +15434,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 96.012 71.12 90)
 			(effects
 				(font
@@ -15453,7 +15504,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 195.072 93.98 90)
 			(effects
 				(font
@@ -15523,7 +15574,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 129.032 25.4 90)
 			(effects
 				(font
@@ -15593,7 +15644,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 70.612 48.26 90)
 			(effects
 				(font
@@ -15636,7 +15687,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 62.23 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15654,7 +15705,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 67.31 40.6399 0)
 			(effects
 				(font
@@ -15663,7 +15714,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 67.31 41.275 0)
 			(effects
 				(font
@@ -15674,7 +15725,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 62.23 39.37 0)
 			(effects
 				(font
@@ -15684,7 +15735,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 62.23 39.37 0)
 			(effects
 				(font
@@ -15739,7 +15790,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 268.732 71.12 90)
 			(effects
 				(font
@@ -15809,7 +15860,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 261.112 25.4 90)
 			(effects
 				(font
@@ -15879,7 +15930,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 136.652 71.12 90)
 			(effects
 				(font
@@ -15922,7 +15973,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 29.21 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15940,7 +15991,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 34.29 40.6399 0)
 			(effects
 				(font
@@ -15949,7 +16000,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 34.29 41.275 0)
 			(effects
 				(font
@@ -15960,7 +16011,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 29.21 39.37 0)
 			(effects
 				(font
@@ -15970,7 +16021,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 29.21 39.37 0)
 			(effects
 				(font
@@ -16064,6 +16115,71 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 60.96 176.53 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b9147f5c-3738-4e23-8f38-16c030481380")
+		(property "Reference" "J6"
+			(at 60.325 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "DC +15V"
+			(at 59.436 173.736 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 60.96 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 60.96 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 60.96 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "88bb9144-92a2-4d72-83d2-86f52f5456d9")
+		)
+		(instances
+			(project "e"
+				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 163.83 71.12 0)
 		(unit 1)
@@ -16091,7 +16207,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 162.052 71.12 90)
 			(effects
 				(font
@@ -16161,7 +16277,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 129.032 93.98 90)
 			(effects
 				(font
@@ -16297,7 +16413,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 261.112 93.98 90)
 			(effects
 				(font
@@ -16437,7 +16553,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 70.612 93.98 90)
 			(effects
 				(font
@@ -16480,7 +16596,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 227.33 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16498,7 +16614,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 232.41 40.6399 0)
 			(effects
 				(font
@@ -16507,7 +16623,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 232.41 41.275 0)
 			(effects
 				(font
@@ -16518,7 +16634,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 227.33 39.37 0)
 			(effects
 				(font
@@ -16528,7 +16644,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 227.33 39.37 0)
 			(effects
 				(font
@@ -16649,7 +16765,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 268.732 25.4 90)
 			(effects
 				(font
@@ -16785,7 +16901,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 70.612 25.4 90)
 			(effects
 				(font
@@ -16828,7 +16944,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 29.21 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16846,7 +16962,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 34.29 86.3599 0)
 			(effects
 				(font
@@ -16855,7 +16971,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 34.29 86.995 0)
 			(effects
 				(font
@@ -16866,7 +16982,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 29.21 85.09 0)
 			(effects
 				(font
@@ -16876,7 +16992,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 29.21 85.09 0)
 			(effects
 				(font
@@ -16931,7 +17047,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 195.072 71.12 90)
 			(effects
 				(font
@@ -17001,7 +17117,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 261.112 71.12 90)
 			(effects
 				(font
@@ -17044,7 +17160,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 234.95 80.01 0)
 		(mirror x)
 		(unit 1)
@@ -17062,8 +17178,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 240.03 78.7401 0)
+		(property "Value" "BC856"
+			(at 240.03 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17071,7 +17187,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 240.03 78.105 0)
 			(effects
 				(font
@@ -17082,7 +17198,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 234.95 80.01 0)
 			(effects
 				(font
@@ -17092,7 +17208,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 234.95 80.01 0)
 			(effects
 				(font
@@ -17186,7 +17302,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 62.23 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17204,7 +17320,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 67.31 86.3599 0)
 			(effects
 				(font
@@ -17213,7 +17329,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 67.31 86.995 0)
 			(effects
 				(font
@@ -17224,7 +17340,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 62.23 85.09 0)
 			(effects
 				(font
@@ -17234,7 +17350,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 62.23 85.09 0)
 			(effects
 				(font
@@ -17289,7 +17405,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 29.972 25.4 90)
 			(effects
 				(font
@@ -17499,7 +17615,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 103.632 48.26 90)
 			(effects
 				(font
@@ -17674,7 +17790,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 128.27 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17692,7 +17808,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 133.35 40.6399 0)
 			(effects
 				(font
@@ -17701,7 +17817,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 133.35 41.275 0)
 			(effects
 				(font
@@ -17712,7 +17828,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 128.27 39.37 0)
 			(effects
 				(font
@@ -17722,7 +17838,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 128.27 39.37 0)
 			(effects
 				(font
@@ -17777,7 +17893,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 235.712 93.98 90)
 			(effects
 				(font
@@ -17847,7 +17963,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 70.612 71.12 90)
 			(effects
 				(font
@@ -17890,7 +18006,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC237")
+		(lib_id "Transistor_BJT:BC848")
 		(at 128.27 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17908,7 +18024,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC237"
+		(property "Value" "BC848"
 			(at 133.35 86.3599 0)
 			(effects
 				(font
@@ -17917,7 +18033,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 133.35 86.995 0)
 			(effects
 				(font
@@ -17928,7 +18044,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF"
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
 			(at 128.27 85.09 0)
 			(effects
 				(font
@@ -17938,7 +18054,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92"
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
 			(at 128.27 85.09 0)
 			(effects
 				(font
@@ -17960,73 +18076,6 @@
 			(project "e"
 				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
 					(reference "Q23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
-		(at 68.58 176.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e04fbfe3-5c6b-4a98-992d-924a35bfe60b")
-		(property "Reference" "J7"
-			(at 68.326 171.196 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Step-down OUT"
-			(at 66.04 173.736 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical"
-			(at 68.58 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 68.58 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 68.58 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2a2a708d-d10e-4925-8ed9-70f0e64e1328")
-		)
-		(pin "2"
-			(uuid "13b80617-82c8-4684-97b8-0056c49ecea0")
-		)
-		(instances
-			(project "e"
-				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
-					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -18126,7 +18175,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 202.692 93.98 90)
 			(effects
 				(font
@@ -18196,7 +18245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 228.092 25.4 90)
 			(effects
 				(font
@@ -18266,7 +18315,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 62.992 71.12 90)
 			(effects
 				(font
@@ -18336,7 +18385,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 37.592 71.12 90)
 			(effects
 				(font
@@ -18445,7 +18494,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 135.89 80.01 0)
 		(mirror x)
 		(unit 1)
@@ -18463,8 +18512,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 140.97 78.7401 0)
+		(property "Value" "BC856"
+			(at 140.97 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18472,7 +18521,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 140.97 78.105 0)
 			(effects
 				(font
@@ -18483,7 +18532,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 135.89 80.01 0)
 			(effects
 				(font
@@ -18493,7 +18542,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 135.89 80.01 0)
 			(effects
 				(font
@@ -18548,7 +18597,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 129.032 48.26 90)
 			(effects
 				(font
@@ -18618,7 +18667,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 235.712 48.26 90)
 			(effects
 				(font
@@ -18688,7 +18737,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 96.012 25.4 90)
 			(effects
 				(font
@@ -18758,7 +18807,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 169.672 25.4 90)
 			(effects
 				(font
@@ -18801,75 +18850,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
-		(at 55.88 179.07 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f81c865b-6391-4bf1-9bff-cd1555330b9d")
-		(property "Reference" "J6"
-			(at 57.404 178.816 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Step-down IN"
-			(at 49.53 181.356 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical"
-			(at 55.88 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 55.88 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 55.88 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3346de15-14f5-4d38-8946-6c4ebc552aaa")
-		)
-		(pin "2"
-			(uuid "102ab96f-0160-40b6-8885-da675513909b")
-		)
-		(instances
-			(project "e"
-				(path "/fd862d55-1df3-4e8e-9edb-750dd582e1a0"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 171.45 93.98 0)
 		(unit 1)
@@ -18897,7 +18877,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 169.672 93.98 90)
 			(effects
 				(font
@@ -18967,7 +18947,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 162.052 25.4 90)
 			(effects
 				(font
@@ -19037,7 +19017,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 62.992 25.4 90)
 			(effects
 				(font
@@ -19237,7 +19217,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 62.992 48.26 90)
 			(effects
 				(font
@@ -19346,7 +19326,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC307")
+		(lib_id "Transistor_BJT:BC856")
 		(at 36.83 34.29 0)
 		(mirror x)
 		(unit 1)
@@ -19364,8 +19344,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC307"
-			(at 41.91 33.0201 0)
+		(property "Value" "BC856"
+			(at 41.91 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19373,7 +19353,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 41.91 32.385 0)
 			(effects
 				(font
@@ -19384,7 +19364,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF"
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC860-D.pdf"
 			(at 36.83 34.29 0)
 			(effects
 				(font
@@ -19394,7 +19374,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100mA Ic, 45V Vce, Epitaxial Silicon PNP Transistor, TO-92"
+		(property "Description" "0.1A Ic, 65V Vce, PNP Transistor, SOT-23"
 			(at 36.83 34.29 0)
 			(effects
 				(font
@@ -19487,7 +19467,7 @@
 		)
 	)
 	(symbol
-		(lib_id "74xx:74HC595")
+		(lib_id "74xx:74HC164")
 		(at 245.11 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19497,15 +19477,6 @@
 		(fields_autoplaced yes)
 		(uuid "ffb0da9b-7253-44da-960f-6fb9a6a5fe5b")
 		(property "Reference" "U3"
-			(at 247.3041 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "74HC595"
 			(at 247.3041 118.11 0)
 			(effects
 				(font
@@ -19514,8 +19485,17 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
-			(at 245.11 133.35 0)
+		(property "Value" "74HC164"
+			(at 247.3041 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SSOP-14_5.3x6.2mm_P0.65mm"
+			(at 267.97 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19523,8 +19503,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
-			(at 245.11 133.35 0)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT164.pdf"
+			(at 267.97 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19532,7 +19512,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "8-bit serial in/out Shift Register 3-State Outputs"
+		(property "Description" "8-bit serial-in parallel-out shift register"
 			(at 245.11 133.35 0)
 			(effects
 				(font
@@ -19565,9 +19545,6 @@
 		(pin "14"
 			(uuid "7986bae2-11dd-4dd2-a1c6-141d49587a5d")
 		)
-		(pin "15"
-			(uuid "8945a8d8-f29e-4e90-bc55-f63cf426074a")
-		)
 		(pin "9"
 			(uuid "435340c0-78a1-4c58-990a-1415cf6bb9db")
 		)
@@ -19576,9 +19553,6 @@
 		)
 		(pin "13"
 			(uuid "48e18e49-a2b7-4ce9-a70e-f2a7de73eb90")
-		)
-		(pin "16"
-			(uuid "87ecc0a7-472a-4d35-8326-996178351475")
 		)
 		(pin "7"
 			(uuid "d3f29f11-6fd2-4f4f-851d-66b53386c018")
